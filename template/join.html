@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+
+
+
+        <h1>Join Today!!!</h1>
+        <br/><br/>
+    
+
+
+        <form method="POST" action="{% url 'home'%}">
+            {% csrf_token %}
+            <div class="mb-3">
+           
+                <input type="text" class="form-control" aria-describedby="emailHelp"placeholder="Enter First Name" name="fname">
+                
+            </div>
+
+            <div class="mb-3">
+           
+                    <input type="text" class="form-control" aria-describedby="emailHelp"placeholder="Enter Last Name" name="lname">
+                    
+                    </div>
+            <div class="mb-3">
+           
+                <input type="integer" class="form-control" aria-describedby="emailHelp"placeholder="Enter Your Age" name="age">
+                        
+            </div>
+
+            <div class="mb-3">
+           
+                <input type="email" class="form-control"  aria-describedby="emailHelp"placeholder="Enter Email" name="email">
+                
+            </div>
+
+            <div class="mb-3">
+            
+                <input type="password" class="form-control"placeholder="Enter Password" name="passwd">
+                
+            </div>
+            <br/>
+            
+            <button type="submit" class="btn btn-secondary">Sign Up</button>
+        </form>
+    <br><br>
+    <a href="{% url 'list'%}"> <button>View List</button></a>
+   
+{% endblock %} 
